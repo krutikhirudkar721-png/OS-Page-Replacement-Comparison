@@ -1,32 +1,32 @@
-def fifo(reference_string, frames):
-    memory = []
-    page_faults = 0
-    index = 0
+           def fifo(reference_string, frames):
+                memory = []
+                page_faults = 0
+                index = 0
 
-    for page in reference_string:
-        if page not in memory:
-            if len(memory) < frames:
-                memory.append(page)
-            else:
-                memory[index] = page
-                index = (index + 1) % frames
-            page_faults += 1
-        print(f"Page: {page} -> Frames: {memory}")
-    return page_faults
+                for page in reference_string:
+                    if page not in memory:
+                           if len(memory) < frames:
+                            memory.append(page)
+                        else:
+                            memory[index] = page
+                            index = (index + 1) % frames
+                        page_faults += 1
+                    print(f"Page: {page} -> Frames: {memory}")
+                return page_faults
 
 
-def lru(reference_string, frames):
-    memory = []
-    page_faults = 0
+            def lru(reference_string, frames):
+                memory = []
+                page_faults = 0
 
-    for i in range(len(reference_string)):
-        page = reference_string[i]
-        if page not in memory:
-            if len(memory) < frames:
-                memory.append(page)
-            else:
-                # Find least recently used page
-                lru_page = min(memory, key=lambda x: reference_string[:i][::-1].index(x))
+                for i in range(len(reference_string)):
+                    page = reference_string[i]
+                    if page not in memory:
+                        if len(memory) < frames:
+                            memory.append(page)
+                        else:
+                            # Find least recently used page
+                            lru_page = min(memory, key=lambda x: reference_string[:i][::-1].index(x))
                 memory[memory.index(lru_page)] = page
             page_faults += 1
         print(f"Page: {page} -> Frames: {memory}")
