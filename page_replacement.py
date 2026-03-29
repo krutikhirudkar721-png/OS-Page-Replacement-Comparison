@@ -10,7 +10,6 @@ def fifo(reference_string, frames):
                 memory[index] = page
                 index = (index + 1) % frames
             page_faults += 1
-
     return page_faults
 
 
