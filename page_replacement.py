@@ -28,7 +28,6 @@ def lru(reference_string, frames):
             page_faults += 1
         else:
             recent.remove(page)
-
         recent.append(page)
 
     return page_faults
