@@ -12,12 +12,10 @@ def fifo(reference_string, frames):
             page_faults += 1
     return page_faults
 
-
 def lru(reference_string, frames):
     memory = []
     page_faults = 0
     recent = []
-
     for page in reference_string:
         if page not in memory:
             if len(memory) < frames:
