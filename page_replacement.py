@@ -75,7 +75,6 @@ if __name__ == "__main__":
 
     print("\n--- RESULT ---")
     print("Algorithm\tPage Faults\tHit Ratio")
-
     print(f"FIFO\t\t{fifo_faults}\t\t{(total - fifo_faults)/total:.2f}")
     print(f"LRU\t\t{lru_faults}\t\t{(total - lru_faults)/total:.2f}")
     print(f"Optimal\t\t{optimal_faults}\t\t{(total - optimal_faults)/total:.2f}")
