@@ -11,7 +11,6 @@ def fifo(reference_string, frames):
                 index = (index + 1) % frames
             page_faults += 1
     return page_faults
-
 def lru(reference_string, frames):
     memory = []
     page_faults = 0
