@@ -10,5 +10,4 @@ This project compares:<br>
 FIFO – Replaces the oldest loaded page.<br>
 LRU – Replaces the least recently used page.<br>
 Optimal – Replaces the page that will not be used for the longest time in the future.<br>
-
 # The program is in the file page_replacement.py
