@@ -62,7 +62,6 @@ def optimal(reference_string, frames):
 
     return page_faults
 
-
 if __name__ == "__main__":
     reference_string = list(map(int, input("Enter reference string: ").split()))
     frames = int(input("Enter number of frames: "))
