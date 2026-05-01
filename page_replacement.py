@@ -33,7 +33,6 @@ def lru(reference_string, frames):
 def optimal(reference_string, frames):
     memory = []
     page_faults = 0
-
     for i in range(len(reference_string)):
         page = reference_string[i]
 
