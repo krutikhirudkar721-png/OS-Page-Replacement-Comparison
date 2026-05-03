@@ -63,7 +63,6 @@ def optimal(reference_string, frames):
 if __name__ == "__main__":
     reference_string = list(map(int, input("Enter reference string: ").split()))
     frames = int(input("Enter number of frames: "))
-
     fifo_faults = fifo(reference_string, frames)
     lru_faults = lru(reference_string, frames)
     optimal_faults = optimal(reference_string, frames)
