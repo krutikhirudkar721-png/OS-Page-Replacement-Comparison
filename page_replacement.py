@@ -77,7 +77,6 @@ if __name__ == "__main__":
 
     # Best algorithm
     min_faults = min(fifo_faults, lru_faults, optimal_faults)
-
     if min_faults == optimal_faults:
         best = "Optimal"
     elif min_faults == lru_faults:
