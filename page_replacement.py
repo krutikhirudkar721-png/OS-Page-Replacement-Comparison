@@ -28,8 +28,7 @@ def lru(reference_string, frames):
         recent.append(page)
 
     return page_faults
-
-
+    
 def optimal(reference_string, frames):
     memory = []
     page_faults = 0
