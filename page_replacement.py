@@ -3,7 +3,6 @@ def fifo(reference_string, frames):
     memory = []
     page_faults = 0
     index = 0
-    
     for page in reference_string:
         if page not in memory:
             if len(memory) < frames:
