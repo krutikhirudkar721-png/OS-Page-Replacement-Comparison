@@ -44,6 +44,7 @@ def optimal(reference_string, frames):
                 replace_page = None
                 farthest = -1
 
+                
                 for mem_page in memory:
                     if mem_page not in future:
                         replace_page = mem_page
